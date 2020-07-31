@@ -68,4 +68,5 @@ $(document).ready(function () {
    valideForms('#consultation form');
    valideForms('#order form');
 
+   $('input[name=phone]').mask("+38(099)999-99-99")
 }); 
