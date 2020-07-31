@@ -32,4 +32,14 @@ $(document).ready(function () {
    };
    toggleSlide('.catalog-item__link')
    toggleSlide('.catalog-item__back')
+
+   //Modal
+   $('[data-modal=consultation]').on('click', () => $('.overlay,#consultation').fadeIn('fast'));
+   $('.modal__close').on('click', () => $('.overlay,#consultation,#thanks,#order').fadeOut('fast'));
+   $('.button_mini').each(function (i) {
+      $(this).on('click', () => {
+         $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text())
+         $('.overlay,#order').fadeIn('fast');
+      })
+   })
 }); 
