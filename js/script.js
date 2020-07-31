@@ -34,6 +34,26 @@ $(document).ready(function () {
    toggleSlide('.catalog-item__back')
 
    //Modal
+   function valideForms(form) {
+      $(form).validate({
+         rules: {
+            name: "required",
+            phone: "required",
+            email: {
+               required: true,
+               email: true
+            }
+         },
+         messages: {
+            name: "Пожалуйста, введите свое имя.",
+            phone: "Пожалуйста, введите свой номер телефона.",
+            email: {
+               required: "Пожалуйста, введите свою почту.",
+               email: "Неправильно введен адрус почты"
+            }
+         }
+      })
+   };
    $('[data-modal=consultation]').on('click', () => $('.overlay,#consultation').fadeIn('fast'));
    $('.modal__close').on('click', () => $('.overlay,#consultation,#thanks,#order').fadeOut('fast'));
    $('.button_mini').each(function (i) {
@@ -42,4 +62,10 @@ $(document).ready(function () {
          $('.overlay,#order').fadeIn('fast');
       })
    })
+
+
+   valideForms('#consultation-form');
+   valideForms('#consultation form');
+   valideForms('#order form');
+
 }); 
