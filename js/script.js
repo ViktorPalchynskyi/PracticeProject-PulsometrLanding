@@ -98,4 +98,14 @@ $(document).ready(function () {
       $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
       return false;
    });
+   wow = new WOW(
+      {
+         boxClass: 'wow',      // default
+         animateClass: 'animate__animated', // default
+         offset: 0,          // default
+         mobile: true,       // default
+         live: true        // default
+      }
+   )
+   wow.init();
 }); 
