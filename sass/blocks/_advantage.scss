@@ -16,6 +16,12 @@
    }
 
    &__icon {
+      &_animated {
+         animation: hearbeat 1.5s ease infinite;
+         &:hover {
+            animation-play-state: paused;
+         }
+      }
    }
 
    &__subtitle {

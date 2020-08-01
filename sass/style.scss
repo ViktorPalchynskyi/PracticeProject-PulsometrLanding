@@ -1,6 +1,6 @@
 @import "base/viriables";
 @import "base/fonts";
-
+@import "base/animations";
 * {
    font-family: "Museo Sans", sans-serif;
 }
@@ -22,3 +22,4 @@
 @import "blocks/feedback";
 @import "blocks/footer.scss";
 @import "blocks/modal";
+@import "blocks/pageup";
