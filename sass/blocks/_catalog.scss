@@ -104,9 +104,6 @@
          align-items: center;
       }
 
-      &__prices {
-      }
-
       &__old-price {
          color: #555555;
          font-size: 14px;
@@ -144,12 +141,14 @@
          padding-right: 20px;
          transition: 0.5s all;
          transform: translateX(0%);
-         padding-left: 19px;
-         margin-bottom: 0;
-         list-style-type: none;
          &_active {
             transform: translateX(-100%);
             margin-left: 0px;
+         }
+         ul {
+            padding-left: 19px;
+            margin-bottom: 0;
+            list-style-type: none;
          }
          li {
             position: relative;
